@@ -1,7 +1,7 @@
 declare module "native-base" {
 	import * as React from "react";
 	import * as ReactNative from "react-native";
-	
+
 	namespace NativeBase {
 		interface Text extends ReactNative.TextProperties {
 			note?: boolean;
@@ -107,6 +107,7 @@ declare module "native-base" {
 			iosBarStyle?: ReactNative.StatusBarStyle;
 			hasSegment?: boolean;
 			translucent?: boolean;
+			transparent?: boolean;
 		}
 
 		interface Left {
@@ -517,7 +518,7 @@ declare module "native-base" {
 			noShadow?: boolean;
 
 			// Adding ListView properties
-			// dataSource?: ReactNative.ListViewDataSource; 
+			// dataSource?: ReactNative.ListViewDataSource;
 			enableEmptySections?: boolean;
 			initialListSize?: number;
 			onChangeVisibleRows?: (
@@ -839,7 +840,7 @@ declare module "native-base" {
 			right?: React.ReactElement<any>;
 			style?: ReactNative.ViewStyle;
 		}
-		
+
 		interface Accordion {
 			dataArray: Array<any>;
 			headerStyle?: ReactNative.ViewStyle;
@@ -1146,7 +1147,7 @@ declare module "native-base" {
 	export class Root extends React.Component<NativeBase.Root, any> {}
 
 	export class SwipeRow extends React.Component<NativeBase.SwipeRow, any> {}
-	
+
 	export class Toast {
 		public static show(configuration: {
 			text: string;
@@ -1160,7 +1161,7 @@ declare module "native-base" {
 			buttonStyle?: ReactNative.ViewStyle;
 		}): void;
 	}
-	
+
 	export class Accordion extends React.Component<NativeBase.Accordion, any>{ }
 
 	export class DatePicker extends React.Component<NativeBase.DatePicker, any> { }
